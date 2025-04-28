@@ -89,6 +89,11 @@ export class DevServer {
     this.filesystemWatcher.on("add", (filePath) =>
       this.handleFileChangedOnFilesystem(filePath),
     )
+    this.filesystemWatcher.on("raw", (eventType, filePath) => {
+      if(eventType == "rename"){
+        this.handleFileChangedOnFilesystem(filePath)
+      }
+    })
 
     await this.upsertInitialFiles()
 
