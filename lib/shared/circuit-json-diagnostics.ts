@@ -17,9 +17,12 @@ export function analyzeCircuitJson(circuitJson: any[]): {
     if (typeof t === "string") {
       if (t.endsWith("_error")) errors.push(item)
       else if (t.endsWith("_warning")) warnings.push(item)
+      else if ("error_type" in item) errors.push(item)
+      else if ("warning_type" in item) warnings.push(item as CircuitJsonIssue)
+    } else {
+      if ("error_type" in item) errors.push(item)
+      if ("warning_type" in item) warnings.push(item as CircuitJsonIssue)
     }
-    if ("error_type" in item) errors.push(item)
-    if ("warning_type" in item) warnings.push(item as CircuitJsonIssue)
   }
 
   return { errors, warnings }
