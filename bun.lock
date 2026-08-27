@@ -76,6 +76,7 @@
         "polygon-clipping": "^0.15.7",
         "poppygl": "^0.0.24",
         "prompts": "^2.4.2",
+        "recreate-schematic": "github:mohan-bee/recreate-schematic#7da6ed0366c59314ad8d8561be79ebed8d762df9",
         "redaxios": "^0.5.1",
         "semver": "^7.6.3",
         "spicets": "^0.0.4",
@@ -1083,6 +1084,8 @@
 
     "readdirp": ["readdirp@4.1.2", "", {}, "sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg=="],
 
+    "recreate-schematic": ["recreate-schematic@github:mohan-bee/recreate-schematic#7da6ed0", { "dependencies": { "transformation-matrix": "^3.1.0" }, "peerDependencies": { "@tscircuit/solver-utils": "^0.0.21", "circuit-json": "*", "graphics-debug": "*", "react": "^19", "typescript": "^5" }, "optionalPeers": ["@tscircuit/solver-utils", "graphics-debug"] }, "mohan-bee-recreate-schematic-7da6ed0", "sha512-4QrFGNGdRSTVQ62s4zwmZl20xguXd/OqBW6sg6Qq4Mbb5CucUm0ZNTAnsBhplLNgYt0Vk8R0iZk00hetf3e9RQ=="],
+
     "redaxios": ["redaxios@0.5.1", "", {}, "sha512-FSD2AmfdbkYwl7KDExYQlVvIrFz6Yd83pGfaGjBzM9F6rpq8g652Q4Yq5QD4c+nf4g2AgeElv1y+8ajUPiOYMg=="],
 
     "rename-keys": ["rename-keys@1.2.0", "", {}, "sha512-U7XpAktpbSgHTRSNRrjKSrjYkZKuhUukfoBlXWXUExCAqhzh1TU3BDRAfJmarcl5voKS+pbKU9MvyLWKZ4UEEg=="],
@@ -1388,6 +1391,8 @@
     "prompts/kleur": ["kleur@3.0.3", "", {}, "sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w=="],
 
     "react-reconciler/scheduler": ["scheduler@0.26.0", "", {}, "sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA=="],
+
+    "recreate-schematic/transformation-matrix": ["transformation-matrix@3.1.0", "", {}, "sha512-oYubRWTi2tYFHAL2J8DLvPIqIYcYZ0fSOi2vmSy042Ho4jBW2ce6VP7QfD44t65WQz6bw5w1Pk22J7lcUpaTKA=="],
 
     "restore-cursor/signal-exit": ["signal-exit@4.1.0", "", {}, "sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw=="],
 

@@ -58,6 +58,8 @@ Commands:
   upgrade                      Upgrade CLI to the latest version
   doctor                       Run diagnostic checks for your tscircuit setup
   check [file]                 Partially build and validate circuit artifacts
+  optimize-schematic [options] [file]  Recommend tscircuit schematic positions
+                               from an image-derived reference
   registry                     Manage tscircuit registry resources
   search [options] <query...>  Search for footprints, CAD models or packages in
                                the tscircuit ecosystem
@@ -70,6 +72,37 @@ Commands:
   help [command]               display help for command
 ```
 <!-- END_HELP_OUTPUT -->
+
+### Optimize a schematic against a reference image
+
+First, use an AI vision model to extract component names and center coordinates
+from the reference image into a JSON file:
+
+```json
+{
+  "coordinateSystem": "screen",
+  "components": [
+    { "name": "R1", "center": { "x": 405, "y": 355 } },
+    { "name": "C1", "center": { "x": 330, "y": 310 } },
+    { "name": "Q1", "center": { "x": 510, "y": 315 } }
+  ]
+}
+```
+
+Then compare those positions with a real tscircuit schematic:
+
+```bash
+tsci optimize-schematic index.circuit.tsx --reference reference.json
+```
+
+The command renders the circuit, searches for score-improving component moves,
+and prints recommended `schX` and `schY` props. Apply those props to the TSX and
+run the command again to measure the updated placement. Use `--json` when an AI
+agent or another program needs the complete solver steps and recommendations.
+
+This command does not infer connectivity, analyze image pixels, or modify the
+TSX automatically. The AI remains responsible for creating the circuit and the
+reference JSON, then applying the recommendations.
 
 The `build` command also accepts the following options:
 

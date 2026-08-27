@@ -82,6 +82,7 @@
     "polygon-clipping": "^0.15.7",
     "poppygl": "^0.0.24",
     "prompts": "^2.4.2",
+    "recreate-schematic": "github:mohan-bee/recreate-schematic#7da6ed0366c59314ad8d8561be79ebed8d762df9",
     "redaxios": "^0.5.1",
     "semver": "^7.6.3",
     "spicets": "^0.0.4",

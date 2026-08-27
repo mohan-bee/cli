@@ -33,19 +33,20 @@ import { registerExport } from "./export/register"
 import { registerImport } from "./import/register"
 import { registerInit } from "./init/register"
 import { registerInstall } from "./install/register"
+import { registerOptimizeSchematic } from "./optimize-schematic/register"
 import { registerPush } from "./push/register"
-import { registerRemove } from "./remove/register"
 import { registerRegistryPackagesCreate } from "./registry/packages/create/register"
-import { registerRegistryPackagesUpdate } from "./registry/packages/update/register"
 import { registerRegistryPackages } from "./registry/packages/register"
+import { registerRegistryPackagesUpdate } from "./registry/packages/update/register"
 import { registerRegistry } from "./registry/register"
+import { registerRemove } from "./remove/register"
 import { registerSearch } from "./search/register"
 import { registerSetup } from "./setup/register"
 import { registerSimulate } from "./simulate/register"
 import { registerSnapshot } from "./snapshot/register"
 import { registerTranspile } from "./transpile/register"
-import { registerUpgradeCommand } from "./upgrade/register"
 import { registerUpdate } from "./update/register"
+import { registerUpgradeCommand } from "./upgrade/register"
 
 export const program = new Command()
 
@@ -80,6 +81,7 @@ registerRemove(program)
 registerSnapshot(program)
 registerSetup(program)
 registerInstall(program)
+registerOptimizeSchematic(program)
 registerUpdate(program)
 registerUpgradeCommand(program)
 registerDoctor(program)
